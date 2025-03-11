@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
 :root {
     --primary-color: #333;
     --secondary-color: #666;
@@ -18,7 +20,12 @@ body {
     color: var(--primary-color);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-family-secondary);
     color: var(--tertiary-color);
 }
@@ -38,16 +45,38 @@ img {
     margin: 0 auto;
 }
 
-main {
+nav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+nav a {
+    color: var(--background-color);
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .card {
-    margin: 1rem;
     padding: 1rem;
     background-color: var(--background-color);
     border-radius: 0.25rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }

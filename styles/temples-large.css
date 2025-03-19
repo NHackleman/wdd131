@@ -1,0 +1,17 @@
+@media (min-width: 800px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    nav ul {
+        justify-content: flex-start;
+    }
+
+    nav a {
+        margin-right: 1rem;
+    }
+
+    .toggle {
+        display: none;
+    }
+}

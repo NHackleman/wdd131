@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='A simple description goes here'>
+    <meta name='author' content='Nathan Hackleman'>
+    <link rel='stylesheet' href='styles/place.css'>
+    <title>Place</title>
+</head>
+
+<body>
+    <header>
+        <h1>Place Title</h1>
+    </header>
+    <main class="hero-container">
+        <!-- Hero image as background -->
+        <div class="hero-background">
+            <picture>
+                <source srcset="images/placeholder.webp" media="(min-width: 600px)" class="desktop-only-img">
+                <img src="images/placeholder-vertical.webp" alt="Responsive Image" class="mobile-only-img">
+            </picture>
+        </div>
+
+        <!-- Content overlaid on hero image -->
+        <div class="overlay-content">
+            <section class="data-section">
+                <h2>Data</h2>
+                <p>Label: Value</p>
+                <p>Label: Value</p>
+                <p>Label: Value</p>
+                <p>Label: Value</p>
+                <p>Label: Value</p>
+                <p>Label: Value</p>
+            </section>
+
+            <section class="weather-section">
+                <h2>Weather <span class="weather-icon">⛅</span></h2>
+                <img src="images/weatherIcon.svg" alt="Weather Icon" class="weather-icon-mobile">
+                <p>Label: Value</p>
+                <p>Label: Value</p>
+                <p>Label: Value</p>
+                <p>Label: Value</p>
+                <p>Wind Chill: <span id="windChill">N/A</span></p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Standard Footer content - copyright - name - location</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/place.js" defer></script>
+</body>
+
+</html>

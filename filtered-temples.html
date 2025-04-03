@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple example of using media queries in CSS.">
+    <meta name="author" content="Nathan Hackleman">
+    <title>Temple Album</title>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script defer src="scripts/filtered-temples.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="filter-home" class="active">Home</a></li>
+                <li><a href="#" id="filter-old">Old</a></li>
+                <li><a href="#" id="filter-new">New</a></li>
+                <li><a href="#" id="filter-large">Large</a></li>
+                <li><a href="#" id="filter-small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Temple Images</h2>
+        <div id="temple-cards" class="temple-grid">
+            <!-- Temple cards will be dynamically inserted here by JavaScript -->
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const templeCardsContainer = document.getElementById('temple-cards');
+
+                // Filter navigation elements
+                const filterHome = document.getElementById('filter-home');
+                const filterOld = document.getElementById('filter-old');
+                const filterNew = document.getElementById('filter-new');
+                const filterLarge = document.getElementById('filter-large');
+                const filterSmall = document.getElementById('filter-small');
+
+                // Function to parse dedication date and extract year
+                function getDedicationYear(dedicationStr) {
+                    // Format is "YYYY, Month, DD"
+                    const parts = dedicationStr.split(',');
+                    return parseInt(parts[0].trim());
+                }
+
+                // Function to render temple cards based on filter
+                function renderTempleCards(filteredTemples) {
+                    // Clear existing cards
+                    templeCardsContainer.innerHTML = '';
+
+                    // Create and append temple cards for the filtered temples
+                    filteredTemples.forEach(temple => {
+                        // Create card container
+                        const card = document.createElement('article');
+                        card.classList.add('temple-card');
+
+                        // Create image with lazy loading
+                        const image = document.createElement('img');
+                        image.src = temple.imageUrl;
+                        image.alt = `${temple.templeName} Temple`;
+                        image.loading = "lazy"; // Native lazy loading
+
+                        // Create temple info section
+                        const infoDiv = document.createElement('div');
+                        infoDiv.classList.add('temple-info');
+
+                        // Add temple name
+                        const name = document.createElement('h3');
+                        name.textContent = temple.templeName;
+
+                        // Add temple location
+                        const location = document.createElement('p');
+                        location.innerHTML = `<strong>Location:</strong> ${temple.location}`;
+
+                        // Add temple dedication date
+                        const dedicated = document.createElement('p');
+                        dedicated.innerHTML = `<strong>Dedicated:</strong> ${temple.dedicated}`;
+
+                        // Add temple area
+                        const area = document.createElement('p');
+                        area.innerHTML = `<strong>Area:</strong> ${temple.area} sq ft`;
+
+                        // Append all elements to the card
+                        infoDiv.appendChild(name);
+                        infoDiv.appendChild(location);
+                        infoDiv.appendChild(dedicated);
+                        infoDiv.appendChild(area);
+
+                        card.appendChild(image);
+                        card.appendChild(infoDiv);
+
+                        // Append the card to the container
+                        templeCardsContainer.appendChild(card);
+                    });
+                }
+
+                // Set active class on clicked filter
+                function setActiveFilter(activeElement) {
+                    // Remove active class from all filters
+                    [filterHome, filterOld, filterNew, filterLarge, filterSmall].forEach(filter => {
+                        filter.classList.remove('active');
+                    });
+
+                    // Add active class to clicked filter
+                    activeElement.classList.add('active');
+                }
+
+                // Initial render - show all temples
+                renderTempleCards(temples);
+
+                // Event listeners for filter buttons
+                filterHome.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    setActiveFilter(this);
+                    renderTempleCards(temples); // Show all temples
+                });
+
+                filterOld.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    setActiveFilter(this);
+                    // Filter temples built before 1900
+                    const oldTemples = temples.filter(temple => {
+                        const year = getDedicationYear(temple.dedicated);
+                        return year < 1900;
+                    });
+                    renderTempleCards(oldTemples);
+                });
+
+                filterNew.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    setActiveFilter(this);
+                    // Filter temples built after 2000
+                    const newTemples = temples.filter(temple => {
+                        const year = getDedicationYear(temple.dedicated);
+                        return year > 2000;
+                    });
+                    renderTempleCards(newTemples);
+                });
+
+                filterLarge.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    setActiveFilter(this);
+                    // Filter temples larger than 90,000 square feet
+                    const largeTemples = temples.filter(temple => temple.area > 90000);
+                    renderTempleCards(largeTemples);
+                });
+
+                filterSmall.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    setActiveFilter(this);
+                    // Filter temples smaller than 10,000 square feet
+                    const smallTemples = temples.filter(temple => temple.area < 10000);
+                    renderTempleCards(smallTemples);
+                });
+            });
+        </script>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Your Name. Last modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

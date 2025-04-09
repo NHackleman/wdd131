@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="WDD 131 - Product Review Confirmation - Nathan Hackleman">
+    <meta name="author" content="Nathan Hackleman">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <title>WDD 131 – Review Confirmation - Nathan Hackleman</title>
+</head>
+
+<body>
+    <header>
+        <h1>Review Confirmation</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="form.html">Submit Another Review</a>
+            <a href="https://www.linkedin.com/in/nathan-hackleman-0a7725196/">LinkedIn</a>
+            <a href="https://byupw.instructure.com/">Canvas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <div id="review-counter"></div>
+            <div id="review-data" class="review-data">
+                <!-- Review data will be populated by JavaScript -->
+            </div>
+            <div class="action-buttons">
+                <a href="form.html" class="btn">Submit Another Review</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <span id="currentyear"></span> Nathan Hackleman | Nebraska, USA
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sunny Side Up Golf Course - Gallery">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Sunny Side Up - Gallery</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Course Preview</a></li>
+                <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+                <li><a href="membership.html">Membership/Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="gallery">
+            <h1>Gallery</h1>
+            <div class="gallery-filters">
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="course">Course</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="facilities">Facilities</button>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- JS will populate images here, example static images: -->
+                <img src="images/golf1.jpg" alt="Golf course sunrise" loading="lazy" data-category="course">
+                <img src="images/event1.jpg" alt="Tournament event" loading="lazy" data-category="events">
+                <img src="images/clubhouse.jpg" alt="Clubhouse exterior" loading="lazy" data-category="facilities">
+                <!-- More images as needed -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Sunny Side Up Golf Course | Designed by Nathan Hackleman</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

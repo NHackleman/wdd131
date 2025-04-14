@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sunny Side Up Golf Course - Course Preview">
+    <link rel="stylesheet" href="styles/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Sunny Side Up - Course Preview</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html" aria-current="page">Course Preview</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="membership.html">Membership/Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="course-preview">
+            <h1>Course Preview</h1>
+            <p>Explore each hole of our 18-hole championship course. Select a hole to see its layout, par, and tips!</p>
+            <div class="hole-selector">
+                <label for="holeSelect">Choose a hole:</label>
+                <select id="holeSelect" name="holeSelect">
+                    <!-- JS will populate options 1-18 -->
+                </select>
+            </div>
+            <div id="holeDetails" class="hole-details">
+                <!-- JS will display selected hole info here -->
+            </div>
+            <div class="course-map">
+                <img src="images/course-map.jpg" alt="Course Map" loading="lazy">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Sunny Side Up Golf Course | Designed by Nathan Hackleman</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

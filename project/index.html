@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sunny Side Up Golf Course - Home">
+    <link rel="stylesheet" href="styles/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Sunny Side Up - Home</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="course.html">Course Preview</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="membership.html">Membership/Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Sunny Side Up Golf Course</h1>
+            <p>Experience the joy of golf in a beautiful, friendly, and challenging environment. Early tee times, lush
+                greens, and a welcoming community await you!</p>
+            <button id="bookTeeTimeBtn">Book a Tee Time</button>
+        </section>
+        <section class="highlights">
+            <h2>Course Highlights</h2>
+            <ul>
+                <li>18-hole championship course with stunning sunrise views</li>
+                <li>Modern clubhouse and pro shop</li>
+                <li>Practice facilities and lessons for all skill levels</li>
+                <li>Special events and tournaments throughout the year</li>
+            </ul>
+        </section>
+        <section class="amenities">
+            <h2>Amenities</h2>
+            <p>Enjoy our full-service clubhouse, delicious dining, and relaxing patio with panoramic course views.</p>
+        </section>
+        <section class="cta">
+            <h2>Ready to Play?</h2>
+            <p>Check out our <a href="course.html">Course Preview</a> or <a href="membership.html">become a member
+                    today!</a></p>
+        </section>
+        <div id="bookingModal" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close-modal" id="closeBookingModal" tabindex="0">&times;</span>
+                <h2>Book a Tee Time</h2>
+                <form id="bookingForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required>
+                    <button type="submit">Book Now</button>
+                </form>
+                <div id="bookingFeedback"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Sunny Side Up Golf Course | Designed by Nathan Hackleman</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sunny Side Up Golf Course - Membership and Contact">
+    <link rel="stylesheet" href="styles/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Sunny Side Up - Membership/Contact</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Course Preview</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="membership.html" aria-current="page">Membership/Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="membership">
+            <h1>Membership</h1>
+            <p>Join our community and enjoy exclusive benefits, priority booking, and member-only events!</p>
+            <ul>
+                <li>Annual Membership: $1,200/year</li>
+                <li>Monthly Membership: $120/month</li>
+                <li>Junior Membership: $500/year (under 18)</li>
+                <li>Family Plans Available</li>
+            </ul>
+        </section>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm" autocomplete="on">
+                <label for="contactName">Name:</label>
+                <input type="text" id="contactName" name="contactName" required>
+                <label for="contactEmail">Email:</label>
+                <input type="email" id="contactEmail" name="contactEmail" required>
+                <label for="contactMsg">Message:</label>
+                <textarea id="contactMsg" name="contactMsg" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="contactFeedback"></div>
+            <p>Email: <a href="mailto:info@sunnysideupgolf.com">info@sunnysideupgolf.com</a></p>
+            <p>Phone: (555) 123-4567</p>
+            <p>Address: 123 Sunrise Lane, Fairway City, USA</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Sunny Side Up Golf Course | Designed by Nathan Hackleman</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -48,9 +48,96 @@ document.addEventListener('DOMContentLoaded', () => {
     const holeSelect = document.getElementById('holeSelect');
     const holeDetails = document.getElementById('holeDetails');
     const holes = [
-        { number: 1, par: 4, desc: "A gentle dogleg right with a wide fairway and a welcoming sunrise view.", img: "images/hole1.jpg" },
-        { number: 2, par: 3, desc: "Short par 3 over water, club selection is key.", img: "images/hole2.jpg" },
-        // ...holes 3-18, add more as needed
+        {
+            number: 1,
+            par: 4,
+            desc: "A gentle dogleg right with a wide fairway and a welcoming sunrise view."
+        },
+        {
+            number: 2,
+            par: 3,
+            desc: "Short par 3 over water, club selection is key."
+        },
+        {
+            number: 3,
+            par: 5,
+            desc: "A long straight hole with a bunker guarding the green."
+        },
+        {
+            number: 4,
+            par: 4,
+            desc: "A challenging uphill par 4 with a narrow approach and mature trees lining the fairway."
+        },
+        {
+            number: 5,
+            par: 3,
+            desc: "A short par 3 with a sloping green and tricky wind conditions."
+        },
+        {
+            number: 6,
+            par: 5,
+            desc: "A sweeping dogleg left par 5, risk-reward for those who cut the corner over the water."
+        },
+        {
+            number: 7,
+            par: 4,
+            desc: "A downhill par 4 with a wide landing area, but beware the hidden bunker near the green."
+        },
+        {
+            number: 8,
+            par: 3,
+            desc: "A long par 3 bordered by wildflowers, requiring a precise tee shot."
+        },
+        {
+            number: 9,
+            par: 4,
+            desc: "A par 4 finishing hole with a pond guarding the front of the green."
+        },
+        {
+            number: 10,
+            par: 4,
+            desc: "A gentle par 4 to start the back nine, featuring a split fairway and rolling hills."
+        },
+        {
+            number: 11,
+            par: 5,
+            desc: "A demanding par 5 with out-of-bounds on the right and a two-tiered green."
+        },
+        {
+            number: 12,
+            par: 3,
+            desc: "A picturesque par 3 over a ravine, club selection is crucial."
+        },
+        {
+            number: 13,
+            par: 4,
+            desc: "A narrow par 4 with dense woods along the left side and a small green."
+        },
+        {
+            number: 14,
+            par: 5,
+            desc: "A par 5 with a sharp dogleg right and a green protected by bunkers."
+        },
+        {
+            number: 15,
+            par: 4,
+            desc: "A short par 4 with an elevated tee and panoramic course views."
+        },
+        {
+            number: 16,
+            par: 3,
+            desc: "A long par 3 with a water hazard short and left of the green."
+        },
+        {
+            number: 17,
+            par: 4,
+            desc: "A strategic par 4 with a split fairway and a challenging approach."
+        },
+        {
+            number: 18,
+            par: 5,
+            desc: "A memorable finishing par 5 with a wide fairway and a large, undulating green."
+        }
     ];
     if (holeSelect && holeDetails) {
         // Populate options
@@ -60,10 +147,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const hole = holes.find(h => h.number == num);
             if (hole) {
                 holeDetails.innerHTML = `
-          <h3>Hole ${hole.number} (Par ${hole.par})</h3>
-          <p>${hole.desc}</p>
-          <img src="${hole.img}" alt="Hole ${hole.number}" loading="lazy">
-        `;
+                <h3>Hole ${hole.number} (Par ${hole.par})</h3>
+                <p>${hole.desc}</p>
+                `;
             }
         }
         holeSelect.addEventListener('change', e => {

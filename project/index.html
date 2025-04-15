@@ -14,20 +14,25 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="course.html">Course Preview</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="membership.html">Membership/Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-flex">
+            <img src="images/Logo.webp" alt="Sunny Side Up Logo" class="site-logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="course.html">Course Preview</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="membership.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <img src="images/golf-banner.jpg" alt="Golf Course Banner" class="golf-banner">
     </header>
+
     <main>
         <section class="hero">
             <h1>Welcome to Sunny Side Up Golf Course</h1>
-            <p>Experience the joy of golf in a beautiful, friendly, and challenging environment. Early tee times, lush
-                greens, and a welcoming community await you!</p>
+            <img src="images/golfer.jpg" alt="Golfer at Sunny Side Up" class="hero-img">
+            <p>Experience the joy of golf in a beautiful, friendly, and challenging environment...</p>
             <button id="bookTeeTimeBtn">Book a Tee Time</button>
         </section>
         <section class="highlights">
@@ -41,6 +46,9 @@
         </section>
         <section class="amenities">
             <h2>Amenities</h2>
+            <img src="images/clubhouse.jpg" alt="Clubhouse" class="amenities-img">
+            <img src="images/golf-carts.jpg" alt="Golf Carts" class="amenities-img">
+
             <p>Enjoy our full-service clubhouse, delicious dining, and relaxing patio with panoramic course views.</p>
         </section>
         <section class="cta">
@@ -68,7 +76,7 @@
     <footer>
         <p>&copy; 2025 Sunny Side Up Golf Course | Designed by Nathan Hackleman</p>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

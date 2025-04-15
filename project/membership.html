@@ -14,18 +14,22 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="course.html">Course Preview</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="membership.html" aria-current="page">Membership/Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-flex">
+            <img src="images/Logo.webp" alt="Sunny Side Up Logo" class="site-logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="course.html">Course Preview</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="membership.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="membership">
             <h1>Membership</h1>
+            <img src="images/clubhouse.jpg" alt="Clubhouse" class="membership-img">
             <p>Join our community and enjoy exclusive benefits, priority booking, and member-only events!</p>
             <ul>
                 <li>Annual Membership: $1,200/year</li>
@@ -36,6 +40,7 @@
         </section>
         <section class="contact">
             <h2>Contact Us</h2>
+            <img src="images/golfer.jpg" alt="Golfer" class="membership-img">
             <form id="contactForm" autocomplete="on">
                 <label for="contactName">Name:</label>
                 <input type="text" id="contactName" name="contactName" required>
@@ -54,7 +59,7 @@
     <footer>
         <p>&copy; 2025 Sunny Side Up Golf Course | Designed by Nathan Hackleman</p>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

@@ -14,14 +14,17 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="course.html">Course Preview</a></li>
-                <li><a href="gallery.html" aria-current="page">Gallery</a></li>
-                <li><a href="membership.html">Membership/Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-flex">
+            <img src="images/Logo.webp" alt="Sunny Side Up Logo" class="site-logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="course.html">Course Preview</a></li>
+                    <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+                    <li><a href="membership.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="gallery">
@@ -33,18 +36,28 @@
                 <button class="filter-btn" data-filter="facilities">Facilities</button>
             </div>
             <div class="gallery-grid" id="galleryGrid">
-                <!-- JS will populate images here, example static images: -->
-                <img src="images/golf1.jpg" alt="Golf course sunrise" loading="lazy" data-category="course">
-                <img src="images/event1.jpg" alt="Tournament event" loading="lazy" data-category="events">
-                <img src="images/clubhouse.jpg" alt="Clubhouse exterior" loading="lazy" data-category="facilities">
-                <!-- More images as needed -->
+                <img src="images/course-sunrise.jpg" alt="Golf course sunrise" loading="lazy" data-category="course"
+                    class="gallery-img">
+                <img src="images/tournament.jpg" alt="Tournament event" loading="lazy" data-category="events"
+                    class="gallery-img">
+                <img src="images/clubhouse.jpg" alt="Clubhouse exterior" loading="lazy" data-category="facilities"
+                    class="gallery-img">
+                <img src="images/golfer.jpg" alt="Golfer" loading="lazy" data-category="course" class="gallery-img">
+                <img src="images/golf-carts.jpg" alt="Golf Carts" loading="lazy" data-category="facilities"
+                    class="gallery-img">
+                <img src="images/birds-eye-course.jpg" alt="Bird's Eye Course" loading="lazy" data-category="course"
+                    class="gallery-img">
+                <img src="images/birds-eye-hole.jpg" alt="Bird's Eye Hole" loading="lazy" data-category="course"
+                    class="gallery-img">
+                <img src="images/ball-closeup-vertical.jpg" alt="Golf Ball Closeup" loading="lazy"
+                    data-category="course" class="gallery-img">
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 Sunny Side Up Golf Course | Designed by Nathan Hackleman</p>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
